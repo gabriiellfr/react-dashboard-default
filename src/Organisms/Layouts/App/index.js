@@ -5,7 +5,7 @@ import { Sidebar, Header } from '../../../Components';
 
 import { AppContainer, ContentContainer, MainContent, Footer, FooterText } from './styles';
 
-const Layout = ({ children }) => {
+const AppLayout = ({ children }) => {
   return (
     <AppContainer>
       <Header />
@@ -22,4 +22,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default AppLayout;

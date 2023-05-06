@@ -2,8 +2,8 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { Dashboard, Settings } from './Pages';
-import { ErrorBoundary, Loading } from './Components';
+import { Dashboard, Settings } from '../Pages';
+import { ErrorBoundary, Loading } from '../Components';
 
 const AppRoutes = () => (
     <ErrorBoundary>
