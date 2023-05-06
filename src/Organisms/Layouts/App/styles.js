@@ -1,13 +1,12 @@
-// layouts/app/styles.js
 import { styled } from '@mui/system';
 import { Container, Typography, Box } from '@mui/material';
 
-export const AppContainer = styled(Box)({
-  backgroundColor: '#f5f5f5',
+export const AppContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.background.default,
   minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
-});
+}));
 
 export const ContentContainer = styled(Container)({
   paddingTop: 80,

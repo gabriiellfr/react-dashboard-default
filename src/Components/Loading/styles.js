@@ -1,9 +1,8 @@
-// src/Components/Loading/styles.js
-import styled from 'styled-components';
+import { styled } from '@mui/system';
 
-export const LoadingWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-`;
+export const LoadingWrapper = styled('div')({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '50vh',
+});

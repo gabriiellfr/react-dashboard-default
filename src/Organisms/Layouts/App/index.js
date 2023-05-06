@@ -1,5 +1,5 @@
-// layouts/app/index.js
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Sidebar, Header } from '../../../Components';
 
@@ -20,6 +20,13 @@ const AppLayout = ({ children }) => {
       </Footer>
     </AppContainer>
   );
+};
+
+AppLayout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default AppLayout;

@@ -6,9 +6,9 @@ export const ToolbarWrapper = styled(Toolbar)({
   justifyContent: 'space-between',
 });
 
-export const IconButtonWrapper = styled(IconButton)({
-  marginRight: '16px',
-});
+export const IconButtonWrapper = styled(IconButton)(({ theme }) => ({
+  marginRight: theme.spacing(2),
+}));
 
 export const Logo = styled('img')({
   width: '50%',

@@ -1,4 +1,3 @@
-// src/Routes.js
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ const AppRoutes = () => (
             <Routes>
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/settings" element={<Settings />} />
+                <Route path="*" element={<div>404 - Page not found</div>} />
             </Routes>
         </Suspense>
     </ErrorBoundary>
