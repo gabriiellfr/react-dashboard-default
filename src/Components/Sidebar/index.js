@@ -5,7 +5,11 @@ import { Dashboard as DashboardIcon, Settings as SettingsIcon } from '@mui/icons
 
 import { DrawerContainer, IconWrapper, Logo, LogoContainer, StyledList, StyledListItem, StyledListItemText, TextWrapper } from './styles';
 
-const Sidebar = ({ isDrawerOpen, toggleDrawer }) => {
+import { useDrawer } from '../../Providers/DrawerProvider';
+
+const Sidebar = () => {
+  const { isDrawerOpen, toggleDrawer } = useDrawer();
+  
   return (
     <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
       <DrawerContainer>

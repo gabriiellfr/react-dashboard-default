@@ -9,6 +9,19 @@ export const DrawerContainer = styled.div`
   width: 260px;
   padding: 32px 0; /* Added vertical padding */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+  .MuiDrawer-paper {
+    width: 260px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.open .MuiDrawer-paper {
+    transform: translateX(0);
+  }
+
+  &.closed .MuiDrawer-paper {
+    transform: translateX(-100%);
+  }
 `;
 
 export const LogoContainer = styled.div`

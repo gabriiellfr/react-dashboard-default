@@ -5,7 +5,11 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 
 import { AvatarBackground, AvatarWrapper, Logo, Wrapper } from './styles';
 
-const Header = ({ toggleDrawer }) => {
+import { useDrawer } from '../../Providers/DrawerProvider';
+
+const Header = () => {
+  const { toggleDrawer } = useDrawer();
+
   return (
     <AppBar position="fixed" sx={{ background: 'linear-gradient(to right, #662d8c, #ed1e79)' }}>
       <Toolbar>

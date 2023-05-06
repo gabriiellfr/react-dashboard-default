@@ -1,18 +1,19 @@
+// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import AppLayout from './Organisms/Layouts/App';
+import { DrawerProvider } from './Providers/DrawerProvider';
 
-import { Dashboard, Settings } from './Pages';
+import AppRoutes from './Routes';
 
 const App = () => (
   <Router>
-    <AppLayout>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
-    </AppLayout>
+    <DrawerProvider>
+      <AppLayout>
+        <AppRoutes />
+      </AppLayout>
+    </DrawerProvider>
   </Router>
 );
 

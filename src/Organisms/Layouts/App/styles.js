@@ -23,6 +23,8 @@ export const ContentContainer = styled(Container)`
   flex-grow: 1;
   margin-top: 32px;
   margin-bottom: 64px;
+  padding-right: 24px;
+  padding-left: 24px;
 `;
 
 export const MainContent = styled.main`
@@ -30,18 +32,17 @@ export const MainContent = styled.main`
 
 export const Footer = styled.footer`
   height: 64px;
-  background: linear-gradient(to bottom right, #3f51b5, #2196f3);
+  background-color: #3f51b5;
   position: absolute;
   bottom: 0;
   width: 100%;
   border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const FooterText = styled(Typography)`
   color: #fff;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 `;

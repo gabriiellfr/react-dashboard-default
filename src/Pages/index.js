@@ -1,2 +1,4 @@
-export { default as Dashboard } from './Dashboard';
-export { default as Settings } from './Settings';
+import { lazy } from 'react';
+
+export const Dashboard = lazy(() => import('./Dashboard'));
+export const Settings = lazy(() => import('./Settings'));
