@@ -1,48 +1,38 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { Container, Typography } from '@mui/material';
+// layouts/app/styles.js
+import { styled } from '@mui/system';
+import { Container, Typography, Box } from '@mui/material';
 
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-`;
+export const AppContainer = styled(Box)({
+  backgroundColor: '#f5f5f5',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+});
 
-export const LayoutContainer = styled.div`
-  background-color: #f5f5f5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
+export const ContentContainer = styled(Container)({
+  paddingTop: 80,
+  flexGrow: 1,
+  marginTop: 32,
+  marginBottom: 64,
+  paddingRight: 24,
+  paddingLeft: 24,
+});
 
-export const ContentContainer = styled(Container)`
-  padding-top: 80px;
-  flex-grow: 1;
-  margin-top: 32px;
-  margin-bottom: 64px;
-  padding-right: 24px;
-  padding-left: 24px;
-`;
+export const MainContent = styled(Box)({});
 
-export const MainContent = styled.main`
-`;
+export const Footer = styled('footer')({
+  height: 64,
+  backgroundColor: '#3f51b5',
+  position: 'absolute',
+  bottom: 0,
+  width: '100%',
+  borderRadius: '8px 8px 0 0',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+});
 
-export const Footer = styled.footer`
-  height: 64px;
-  background-color: #3f51b5;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const FooterText = styled(Typography)`
-  color: #fff;
-  text-align: center;
-`;
+export const FooterText = styled(Typography)({
+  color: '#fff',
+  textAlign: 'center',
+});

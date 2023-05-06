@@ -1,77 +1,81 @@
-import styled from 'styled-components';
-import { List, ListItem, ListItemText } from '@mui/material';
+import { styled } from '@mui/system';
+import {  ListItem, ListItemText } from '@mui/material';
 
-export const DrawerContainer = styled.div`
-  background-color: #F2F2F2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 260px;
-  padding: 32px 0; /* Added vertical padding */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+export const DrawerContainer = styled('div')({
+  backgroundColor: '#F2F2F2',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  width: 260,
+  padding: '32px 0',
+  boxShadow: '0 0 8px rgba(0, 0, 0, 0.1)',
 
-  .MuiDrawer-paper {
-    width: 260px;
-    transition: all 0.2s ease-in-out;
-  }
+  '.MuiDrawer-paper': {
+    width: 260,
+    transition: 'all 0.2s ease-in-out',
+  },
 
-  &.open .MuiDrawer-paper {
-    transform: translateX(0);
-  }
+  '&.open .MuiDrawer-paper': {
+    transform: 'translateX(0)',
+  },
 
-  &.closed .MuiDrawer-paper {
-    transform: translateX(-100%);
-  }
-`;
+  '&.closed .MuiDrawer-paper': {
+    transform: 'translateX(-100%)',
+  },
+});
 
-export const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-`;
+export const LogoContainer = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: 80,
+});
 
-export const StyledList = styled(List)`
-  display: flex;
-  flex-direction: column;
-  margin-top: 32px;
-  padding-left: 0;
-`;
+export const ListContainer = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  marginTop: 32,
+  paddingLeft: 0,
+});
 
-export const StyledListItem = styled(ListItem)`
-  display: flex;
-  align-items: center;
-  height: 48px;
-  color: #424242; /* Changed font color */
-  cursor: pointer;
-  &:hover {
-    background-color: #E8F0FE; /* Added hover effect */
-  }
-`;
+export const ListItemContainer = styled(ListItem)({
+  display: 'flex',
+  alignItems: 'center',
+  height: 48,
+  color: '#424242',
+  cursor: 'pointer',
+  '&:hover': {
+    backgroundColor: '#E8F0FE',
+  },
+});
 
-export const IconWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-`;
+export const IconContainer = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 24,
+});
 
-export const TextWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 0.875rem;
-  margin-left: 16px;
-`;
+export const TextContainer = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  fontSize: '0.875rem',
+  marginLeft: 16,
+});
 
-export const StyledListItemText = styled(ListItemText)`
-  span {
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-`;
+export const NavLink = styled('nav')({
+  cursor: 'pointer',
+});
 
-export const Logo = styled.img`
-  width: 50%;
-  max-width: 100px;
-  height: auto;
-`;
+export const ListItemTextContainer = styled(ListItemText)({
+  span: {
+    fontSize: '0.875rem',
+    fontWeight: 500,
+  },
+});
+
+export const LogoImage = styled('img')({
+  width: '50%',
+  maxWidth: 100,
+  height: 'auto',
+});
