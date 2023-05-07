@@ -14,7 +14,7 @@ import {
   LogoImage,
 } from './styles';
 
-import { useDrawer } from '../../Providers/DrawerProvider';
+import { useDrawer } from '../../../providers';
 
 import { links } from './links';
 

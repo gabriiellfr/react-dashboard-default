@@ -1,19 +1,13 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { Dashboard, Settings } from '../Pages';
-import { ErrorBoundary, Loading } from '../Components';
+import { DashboardRoutes, AuthRoutes } from '../routes';
 
 const AppRoutes = () => (
-    <ErrorBoundary>
-        <Suspense fallback={<Loading />}>
-            <Routes>
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/settings" element={<Settings />} />
-                <Route path="*" element={<div>404 - Page not found</div>} />
-            </Routes>
-        </Suspense>
-    </ErrorBoundary>
+    <Routes>
+        <Route path="/*" element={<AuthRoutes />} />
+        <Route path="/dashboard/*" element={<DashboardRoutes />} />
+    </Routes>
 );
 
 export default AppRoutes;

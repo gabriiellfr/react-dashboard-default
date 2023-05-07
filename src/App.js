@@ -1,20 +1,21 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import AppLayout from './Organisms/Layouts/App';
-import { DrawerProvider } from './Providers/DrawerProvider';
+import { AuthProvider } from './providers';
+import { AppRoutes } from './routes';
+import { GlobalStyles, ThemeProvider } from './styles';
 
-import AppRoutes from './Routes/AppRoutes';
-
-const App = () => (
-  <Router>
-    <DrawerProvider>
-      <AppLayout>
-        <AppRoutes />
-      </AppLayout>
-    </DrawerProvider>
-  </Router>
-);
+const App = () => {
+  return (
+    <Router>
+      <AuthProvider>
+        <ThemeProvider>
+          <GlobalStyles />
+          <AppRoutes />
+        </ThemeProvider>
+      </AuthProvider>
+    </Router>
+  );
+};
 
 export default App;

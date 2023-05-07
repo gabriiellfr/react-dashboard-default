@@ -3,6 +3,8 @@ import React from 'react';
 import { AppBar, Avatar } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 
+import { useDrawer } from '../../../providers';
+
 import {
   AvatarBackground,
   AvatarWrapper,
@@ -11,8 +13,6 @@ import {
   IconButtonWrapper,
   TypographyWrapper,
 } from './styles';
-
-import { useDrawer } from '../../Providers/DrawerProvider';
 
 const Header = () => {
   const { toggleDrawer } = useDrawer();
