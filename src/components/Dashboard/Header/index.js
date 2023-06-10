@@ -3,8 +3,6 @@ import React from 'react';
 import { AppBar, Avatar } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 
-import { useDrawer } from '../../../providers';
-
 import {
   AvatarBackground,
   AvatarWrapper,
@@ -15,12 +13,11 @@ import {
 } from './styles';
 
 const Header = () => {
-  const { toggleDrawer } = useDrawer();
 
   return (
     <AppBar position="fixed" sx={{ background: 'linear-gradient(to right, #662d8c, #ed1e79)' }}>
       <ToolbarWrapper>
-        <IconButtonWrapper edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
+        <IconButtonWrapper edge="start" color="inherit" aria-label="menu">
           <MenuIcon fontSize="large" />
         </IconButtonWrapper>
         <Logo src="/logo.png" alt="Logo" />

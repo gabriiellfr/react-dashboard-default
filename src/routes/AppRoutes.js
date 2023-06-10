@@ -1,13 +1,26 @@
+// AppRoutes.js
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 
-import { DashboardRoutes, AuthRoutes } from '../routes';
+import { authRoutes } from './routeConfigs';
 
-const AppRoutes = () => (
-    <Routes>
-        <Route path="/*" element={<AuthRoutes />} />
-        <Route path="/dashboard/*" element={<DashboardRoutes />} />
-    </Routes>
-);
+const AppRoutes = () => {
+    const allRoutes = [...authRoutes];
+
+    return (
+        <Router>
+            <Routes>
+                {allRoutes.map((route, index) => (
+                    <Route
+                        key={index}
+                        path={route.path}
+                        element={<route.layout>{route.component}</route.layout>}
+                    />
+                ))}
+                <Route path="*" element={<Navigate to="/auth/signin" />} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default AppRoutes;

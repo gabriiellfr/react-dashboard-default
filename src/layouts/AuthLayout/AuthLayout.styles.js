@@ -1,3 +1,4 @@
+// AuthLayout.styles.js
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[2],
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(2),
+    },
   },
   logo: {
     display: 'flex',
